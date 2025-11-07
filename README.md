@@ -1,6 +1,6 @@
-# Optum RX Drug Matcher
+# Drug Matcher
 
-AI-powered medication search demo application showcasing MongoDB Vector Search, Full-Text Search, Hybrid Search with VoyageAI embeddings for United Health Group.
+AI-powered medication search demo application showcasing MongoDB Vector Search, Full-Text Search, Hybrid Search with VoyageAI embeddings.
 
 ## 🎯 Features
 
@@ -246,15 +246,7 @@ Try these queries to see different search capabilities:
 - **Vector Search**: MongoDB Atlas Vector Search (cosine similarity)
 - **Full-Text Search**: MongoDB Atlas Search (Lucene)
 - **Hybrid**: Native `$rankFusion` operator
-
-## 📈 Performance
-
-- **Seed Time**: ~5-10 minutes for 1000 drugs with embeddings
-- **Search Latency**: 
-  - Vector Search: 50-150ms
-  - Full-Text Search: 20-80ms
-  - Hybrid Search: 80-200ms
-- **Embedding Model**: voyage-3.5-lite (cheapest, 512 dims)
+- **Embedding Model**: voyage-3.5-lite (512 dims)
 
 ## 🔧 Troubleshooting
 
@@ -297,7 +289,7 @@ PORT=5000
 NODE_ENV=production
 ```
 
-### Frontend (Vercel)
+### Frontend (local/Vercel)
 ```bash
 # Set environment variable:
 NEXT_PUBLIC_API_URL=<your-backend-url>
@@ -312,7 +304,6 @@ NEXT_PUBLIC_API_URL=<your-backend-url>
 
 ## 📧 Demo Information
 
-**Built for**: Optum RX @ United Health Group
 **Purpose**: Showcase GenAI, Vector Search, Full-Text Search, and Hybrid Search capabilities
 **Date**: 2025
 
