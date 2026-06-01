@@ -1,4 +1,16 @@
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+/**
+ * When unset or empty, use same-origin paths so requests go through Next.js rewrites
+ * (see next.config.ts). That avoids connect-src CSP blocking http://localhost in
+ * embedded previews (e.g. Simple Browser + sw.js).
+ * Set NEXT_PUBLIC_API_URL when the browser must call the API host directly (e.g. split deploy).
+ */
+function apiBase(): string {
+  const raw = process.env.NEXT_PUBLIC_API_URL;
+  if (raw == null || String(raw).trim() === "") return "";
+  return String(raw).replace(/\/$/, "");
+}
+
+const API_BASE_URL = apiBase();
 
 export interface Drug {
   _id: string;
@@ -147,5 +159,6 @@ export async function healthCheck(): Promise<any> {
   
   return response.json();
 }
+
 
 
