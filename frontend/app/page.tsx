@@ -14,7 +14,7 @@ export default function Home() {
   const [currentQuery, setCurrentQuery] = useState('');
   const [error, setError] = useState<string | null>(null);
 
-  const handleSearch = useCallback(async (query: string) => {
+  const handleSearch = useCallback(async (query: string, type: SearchType = searchType) => {
     if (!query.trim()) {
       setResults([]);
       return;
@@ -26,8 +26,8 @@ export default function Home() {
 
     try {
       let response;
-      
-      switch (searchType) {
+
+      switch (type) {
         case 'vector':
           response = await vectorSearch(query);
           break;
@@ -51,14 +51,10 @@ export default function Home() {
     }
   }, [searchType]);
 
-  // Re-run search when search type changes
   const handleSearchTypeChange = useCallback((newType: SearchType) => {
     setSearchType(newType);
-    if (currentQuery) {
-      // Small delay to show the type change
-      setTimeout(() => {
-        handleSearch(currentQuery);
-      }, 100);
+    if (currentQuery.trim()) {
+      handleSearch(currentQuery, newType);
     }
   }, [currentQuery, handleSearch]);
 
