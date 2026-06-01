@@ -48,10 +48,12 @@ cd backend
 # Install dependencies
 npm install
 
-# Environment variables are already configured in .env:
-# MONGODB_URI=mongodb+srv://psb:passw0rd@garage-week.o9q0k.mongodb.net/optum_drug_matcher
-# VOYAGEAI_API_KEY=pa-QYc82mpzam35o39afl1N-p9QfLa_oov-8oXSKmgVF8C
-# PORT=5000
+# Copy env.example to .env and set your values:
+# cp env.example .env
+# MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/?retryWrites=true&w=majority
+# DB_NAME=Optum
+# VOYAGEAI_API_KEY=your_voyageai_api_key_here
+# PORT=5001
 
 # Seed the database (generates 1000 drugs + embeddings)
 npm run seed
@@ -319,5 +321,6 @@ NEXT_PUBLIC_API_URL=<your-backend-url>
 ---
 
 **Ready to explore AI-powered medication search!** 🚀
+
 
 
