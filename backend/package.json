@@ -7,6 +7,10 @@
     "start": "node server.js",
     "dev": "nodemon server.js",
     "seed": "node scripts/seedDatabase.js",
+    "test": "jest --runInBand",
+    "test:integration": "jest --config jest.integration.config.js --runInBand",
+    "test:all": "npm test && npm run test:integration",
+    "test:watch": "jest --watch",
     "test:vector": "node scripts/testVectorSearch.js",
     "check:embeddings": "node scripts/checkEmbeddings.js"
   },
@@ -21,7 +25,9 @@
     "axios": "^1.6.2"
   },
   "devDependencies": {
-    "nodemon": "^3.0.2"
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.2",
+    "supertest": "^7.0.0"
   }
 }
 
