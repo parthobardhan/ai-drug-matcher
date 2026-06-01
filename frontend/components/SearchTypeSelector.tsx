@@ -55,3 +55,4 @@ export default function SearchTypeSelector({ selectedType, onTypeChange }: Searc
 }
 
 
+
