@@ -241,3 +241,4 @@ For filtering + search:
 **After creating both indexes, wait 5 minutes and then test the application!** ✅
 
 
+

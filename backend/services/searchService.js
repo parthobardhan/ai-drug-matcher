@@ -111,6 +111,7 @@ async function fullTextSearch(query, limit = 10) {
  * @param {number} limit - Number of results to return
  * @returns {Promise<Array>} - Array of search results
  */
+
 async function hybridSearch(query, limit = 10) {
   try {
     // Generate embedding for the query

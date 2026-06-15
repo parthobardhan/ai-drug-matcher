@@ -156,3 +156,4 @@ export default function DrugCard({ drug, showScore = true }: DrugCardProps) {
 }
 
 
+

@@ -95,7 +95,7 @@ npm run dev
 
 **Expected output:**
 ```
-✓ MongoDB Connected: garage-week.o9q0k.mongodb.net
+✓ MongoDB Connected: cluster.mongodb.net
 ✓ Database: optum_drug_matcher
 🚀 Server running on http://localhost:5000
 📊 Health check: http://localhost:5000/health
@@ -184,5 +184,6 @@ Open http://localhost:3000 in your browser
 4. Review `INDEX_SETUP.md` for index optimization tips
 
 **Enjoy your AI-powered drug search demo!** 🚀
+
 
 
